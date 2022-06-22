@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <h1 class="menuslogan">Slogan</h1>
+        <div class="burger"></div>
+        <ul class="menulist">
+          <li><a href="" class="item">Home</a></li>
+          <li><a href="" class="item">Services</a></li>
+          <li><a href="" class="item">About</a></li>
+          <li><a href="" class="item">Contacts</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="backdrop">
+      <div class="grayfield"></div>
+      <div class="mobilemenu">
+        <ul class="mobilelist">
+          <li><a href="" class="item">Home</a></li>
+          <li><a href="" class="item">Services</a></li>
+          <li><a href="" class="item">About</a></li>
+          <li><a href="" class="item">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="menuclose"></div>
+    </div>
+    <script>
+      const buttonOpen = document.querySelector(".burger");
+      const buttonClose = document.querySelector(".menuclose");
+      const lightBox = document.querySelector(".backdrop");
+      const grayField = document.querySelector(".grayfield");
+
+      function openMenu(event) {
+        event.preventDefault();
+        lightBox.classList.add("is-open");
+
+        buttonOpen.classList.add("is-cheked"); // проба
+
+        buttonClose.addEventListener("click", closeMenu);
+        grayField.addEventListener("click", closeMenu);
+      }
+
+      function closeMenu(event) {
+        event.preventDefault();
+        lightBox.classList.remove("is-open");
+
+        buttonOpen.classList.remove("is-cheked"); // проба
+      }
+      buttonOpen.addEventListener("click", openMenu);
+    </script>
+  </body>
+</html>
