@@ -10,13 +10,17 @@
   <body>
     <nav>
       <div class="menu">
-        <h1 class="menuslogan">Slogan</h1>
+        <a href="">
+          <img src="./images/logo.png" alt="" class="menu-logo" />
+        </a>
+        <!-- <h1 class="menuslogan">Logo</h1> -->
         <div class="burger"></div>
         <ul class="menulist">
-          <li><a href="" class="item">Home</a></li>
-          <li><a href="" class="item">Services</a></li>
-          <li><a href="" class="item">About</a></li>
-          <li><a href="" class="item">Contacts</a></li>
+          <li><a href="" class="item">Главная</a></li>
+          <li><a href="" class="item">Санаторий</a></li>
+          <li><a href="" class="item">Лечение</a></li>
+          <li><a href="" class="item">Досуг</a></li>
+          <li><a href="" class="item">Контакты</a></li>
         </ul>
       </div>
     </nav>
@@ -24,25 +28,110 @@
       <div class="grayfield"></div>
       <div class="mobilemenu">
         <ul class="mobilelist">
-          <li><a href="" class="item">Home</a></li>
-          <li><a href="" class="item">Services</a></li>
-          <li><a href="" class="item">About</a></li>
-          <li><a href="" class="item">Contacts</a></li>
+          <li><a href="" class="item">Главная</a></li>
+          <li><a href="" class="item">Санаторий</a></li>
+          <li><a href="" class="item">Лечение</a></li>
+          <li><a href="" class="item">Досуг</a></li>
+          <li><a href="" class="item">Контакты</a></li>
         </ul>
       </div>
       <div class="menuclose"></div>
     </div>
+
+    <!-- !!! --- H E R O --- !!! -->
+    <div class="hero">
+      <div class="hero-slide-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-slogan">детский санаторий Сергеевка</h1>
+        <div class="hero-descript">
+          <p>
+            ... Лето, солнце, жара, горячий песок и море. Море, которое манит к
+            себе чарующим волшебством. Тень, прохлада, запах цветов и звонкий,
+            счастливый детский смех. Смех, который надолго остается в памяти.
+            Детский гомон стоит повсюду: на берегу моря, в тени на стадионе, в
+            палатах, на танцплощадке. А все потому, что это детский санаторий
+            «Сергеевка». Кому посчастливилось здесь побывать – надолго запомнит
+            это время. Время беззаботного летнего отдыха, новых знакомств, игр,
+            конкурсов, веселья и хорошего настроения.
+          </p>
+          <div class="hero-span">
+            <span class="order-button">заказать путёвку</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- M A I N -->
+    <div class="main">
+      <div class="main-content">
+        <span class="hrak-span"></span>
+        <div class="main-box">
+          <div>
+            <img
+              src="./images/main/data-gallerys-weekdays-sergeevka-05.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <h2>Санаторий "Сергеевка"</h2>
+            <p>
+              Расположен в курорте Сергеевка, на берегу Шаболатского лимана и
+              Черного моря в 21 километре от города Белгород-Днестровского, и 86
+              км от города Одессы по адресу: проспект Мира -2, пгт Сергеевка,
+              Белгород-Днестровского района, Одесской области.
+            </p>
+            <p>
+              Основан в 1948 году. Лицензия Министерства здравоохранения Украины
+              СЕРИЯ АВ № 333994. Аккредитация Министерства здравоохранения
+              Украины СЕРИЯ МЗ №009464, категория высшая, до 25.01.2015г.
+            </p>
+            <p>
+              По климатической характеристике санаторий входит в зону Одесских
+              курортов, характерными особенностями для которых является чистый
+              степной воздух, освежаемый легким морским бризом.
+              Продолжительность теплого сезона с апреля до октября месяца,
+              изобилие солнечных дней свыше 290 в году.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- F O O T E R -->
+    <footer>
+      <div class="footer-box">
+        <div class="footer-contacts">
+          <h3>Контакты :</h3>
+          <ul>
+            <li>Телефон : <a href=""> +38 (048) 49-48-256</a></li>
+            <li>E-mail : <a href=""> rcdserg@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacts">
+          <h3>Наш адрес :</h3>
+          <p>
+            Детский Санаторий "Сергеевка" 67780, <br />Проспект Мира. 2,
+            <br />п.г.т. Сергеевка, <br />Белгород-Днестровский район,
+            <br />Одесская область
+          </p>
+        </div>
+      </div>
+      <div class="below-footer">
+        <p>Copyright © 2022 | детский санаторий "Сергеевка"</p>
+      </div>
+    </footer>
     <script>
       const buttonOpen = document.querySelector(".burger");
       const buttonClose = document.querySelector(".menuclose");
       const lightBox = document.querySelector(".backdrop");
       const grayField = document.querySelector(".grayfield");
+      const bodyPage = document.querySelector("body");
 
       function openMenu(event) {
         event.preventDefault();
         lightBox.classList.add("is-open");
 
         buttonOpen.classList.add("is-cheked"); // проба
+        bodyPage.classList.add("body-overflow");
 
         buttonClose.addEventListener("click", closeMenu);
         grayField.addEventListener("click", closeMenu);
@@ -53,6 +142,7 @@
         lightBox.classList.remove("is-open");
 
         buttonOpen.classList.remove("is-cheked"); // проба
+        bodyPage.classList.remove("body-overflow");
       }
       buttonOpen.addEventListener("click", openMenu);
     </script>
