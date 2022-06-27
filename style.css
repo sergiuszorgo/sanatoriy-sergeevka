@@ -307,6 +307,7 @@ nav {
 
 .hero-descript p {
   font-style: italic;
+  text-align: justify;
   color: var(--main-sweet-color);
 }
 
@@ -353,6 +354,7 @@ nav {
 
 .main-content p {
   font-size: 1.2em;
+  text-align: justify;
   text-indent: 1.5em;
 }
 
@@ -449,11 +451,10 @@ footer {
 }
 
 .below-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   max-width: 1200px;
   margin: auto;
+  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
